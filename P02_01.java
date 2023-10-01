@@ -37,5 +37,5 @@ class P02_01 {
     private static String toFixed(double value, int digits) {
         return String.format("%." + digits + "f", value);
     }
-} 
+}  
 
