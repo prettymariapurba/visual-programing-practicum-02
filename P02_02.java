@@ -2,12 +2,12 @@
 import java.util.*;
 import java.lang.Math;
 
-class P02 {
+class Program {
     private static Scanner input = new Scanner(System.in);
 
     public static void main(String[] args) {
         String namaGudang, aC, lantai, ketersediaanTeknologi;
-        int kapasitasGudang, jumlahBukuSaatIni;
+        int kapasitasGudang, jumlahBukuSaatIni, penggunaan;
 
         System.out.println("Masukkan Nama Gudang : ");
         namaGudang = input.nextLine();
@@ -27,17 +27,26 @@ class P02 {
         skor = input.nextInt();
         String informasiGudang;
 
+        penggunaan = (int) ((double) jumlahBukuSaatIni / kapasitasGudang * 100);
         if (skor >= 40) {
+            penggunaan = (int) ((double) jumlahBukuSaatIni / kapasitasGudang * 100);
             informasiGudang = "Gudang Elite";
+            System.out.println(namaGudang + "|" + kapasitasGudang + "|" + jumlahBukuSaatIni + "|" + aC + "|" + lantai + "|" + ketersediaanTeknologi + "|" + informasiGudang);
         } else {
             if (skor >= 25) {
+                penggunaan = (int) ((double) jumlahBukuSaatIni / kapasitasGudang * 100);
                 informasiGudang = "Gudang Standar";
+                System.out.println(namaGudang + "|" + kapasitasGudang + "|" + jumlahBukuSaatIni + "|" + aC + "|" + lantai + "|" + ketersediaanTeknologi + "|" + informasiGudang);
             } else {
                 if (skor <= 25) {
+                    penggunaan = (int) ((double) jumlahBukuSaatIni / kapasitasGudang * 100);
                     informasiGudang = "Gudang Perlu Peningkatan";
+                    System.out.println(namaGudang + "|" + kapasitasGudang + "|" + jumlahBukuSaatIni + "|" + aC + "|" + lantai + "|" + ketersediaanTeknologi + "|" + informasiGudang);
+                } else {
+                    informasiGudang = "Gudang Elite";
+                    System.out.println(namaGudang + "|" + kapasitasGudang + "|" + jumlahBukuSaatIni + "|" + aC + "|" + lantai + "|" + ketersediaanTeknologi + "|" + informasiGudang);
                 }
             }
         }
-        System.out.println(namaGudang + "|" + kapasitasGudang + "|" + jumlahBukuSaatIni + "|" + aC + "|" + lantai + "|" + ketersediaanTeknologi + "|" + informasiGudang);
     }
 }
